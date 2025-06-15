@@ -225,7 +225,7 @@ const Weather = () => {
                 className="w-full px-8 py-6 rounded-2xl bg-white/15 backdrop-blur-2xl border border-white/30 text-white text-lg placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all duration-500 shadow-2xl"
               />
               <button
-                onClick={handleSearch}
+                onClick={() => handleSearch(searchQuery)}
                 disabled={isLoading}
                 className="absolute right-3 top-3 p-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 shadow-xl transform hover:scale-110"
               >
