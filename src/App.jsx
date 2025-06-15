@@ -1,6 +1,7 @@
 import React from 'react'
-import Weather from './components/weather'
+
 import { ToastContainer } from 'react-toastify';
+import Weather from './components/Weather';
 
 function App() {
   return (
