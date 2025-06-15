@@ -77,7 +77,7 @@ const Weather = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [particles, setParticles] = useState([]);
+  // const [particles, setParticles] = useState([]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -107,7 +107,7 @@ const Weather = () => {
         return <Sun className={`${iconClass} animate-pulse`} />;
       case 'Clouds':
         return <Cloud className={iconClass} />;
-      case 'Rainy':
+      case 'Rain':
         return <CloudRain className={`${iconClass} animate-bounce`} />;
       case 'Snowy':
         return <CloudSnow className={iconClass} />;
@@ -122,27 +122,27 @@ const Weather = () => {
         return 'from-amber-400 via-orange-500 to-pink-600';
       case 'Clouds':
         return 'from-slate-600 via-slate-700 to-slate-800';
-      case 'Rainy':
+      case 'Rain':
         return 'from-indigo-800 via-purple-800 to-slate-900';
-      case 'Snowy':
+      case 'Snow':
         return 'from-cyan-400 via-blue-500 to-indigo-600';
       default:
         return 'from-amber-400 via-orange-500 to-pink-600';
     }
   };
 
-  const getParticleColor = (condition) => {
-    switch (condition) {
-      case 'Sunny':
-        return 'bg-yellow-300/30';
-      case 'Rainy':
-        return 'bg-blue-300/40';
-      case 'Snowy':
-        return 'bg-white/50';
-      default:
-        return 'bg-white/20';
-    }
-  };
+  // const getParticleColor = (condition) => {
+  //   switch (condition) {
+  //     case 'Sunny':
+  //       return 'bg-yellow-300/30';
+  //     case 'Rainy':
+  //       return 'bg-blue-300/40';
+  //     case 'Snowy':
+  //       return 'bg-white/50';
+  //     default:
+  //       return 'bg-white/20';
+  //   }
+  // };
 
 
   useEffect(()=>{
@@ -163,7 +163,7 @@ const Weather = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10"></div>
 
       {/* Dynamic Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {particles.map(particle => (
           <div
             key={particle.id}
@@ -178,7 +178,7 @@ const Weather = () => {
             }}
           ></div>
         ))}
-      </div>
+      </div> */}
 
       {/* Mesh Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
